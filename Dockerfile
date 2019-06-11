@@ -1,17 +1,18 @@
-FROM leikir/ruby-bundler-node-yarn:ruby-2.3.5-node-6.9.4-alpine
+FROM leikir/ruby-bundler-node-yarn:ruby-2.6.3-node-10.16.0-slim
 
 MAINTAINER Leikir Web <web@leikir.io>
 
-RUN apk add --no-cache \
-      build-base \
-      curl \
-      file \
-      git \
-      imagemagick \
-      libc6-compat \
-      linux-headers \
-      openssh-client \
-      postgresql-client \
-      postgresql-dev
+RUN apt-get update \
+  && apt-get install -qq -y --no-install-recommends \
+    apt-transport-https \
+    build-essential \
+    curl \
+    file \
+    git-core \
+    gnupg \
+    imagemagick \
+    libcurl4-openssl-dev \
+    libpq-dev \
+    netcat
 
-RUN gem install rake --no-ri --no-rdoc
+RUN gem install rake --no-document
