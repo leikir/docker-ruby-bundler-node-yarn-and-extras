@@ -11,6 +11,7 @@ We add:
 and command-line tools:
 * file
 * imagemagick
+* dockerize
 
 and other build-required tools:
 * build-base
