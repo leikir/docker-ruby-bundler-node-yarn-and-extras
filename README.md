@@ -17,4 +17,4 @@ and other build-required tools:
 * build-base
 * libc6-compat
 * linux-headers
-# postgresql-dev
+* postgresql-dev
