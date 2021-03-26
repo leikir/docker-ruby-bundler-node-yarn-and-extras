@@ -14,7 +14,8 @@ RUN apt-get update \
     gnupg \
     imagemagick \
     libcurl4-openssl-dev \
-    libpq-dev
+    libpq-dev \
+    shared-mime-info
 
 RUN gem install rake --no-document
 
